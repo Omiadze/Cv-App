@@ -32,6 +32,11 @@
   border-radius: 30px;
   color: #b99470;
 }
+.general,
+.education,
+.experience {
+  font-size: small;
+}
 .general h1,
 .education h1,
 .experience h1 {
