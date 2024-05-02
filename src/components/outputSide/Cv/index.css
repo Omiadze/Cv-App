@@ -15,6 +15,10 @@
   color: #b99470;
   border-radius: 5px;
   padding: 2%;
+  text-align: center;
+}
+.general-info-content h1 {
+  text-align: center;
 }
 .h1 {
   background-color: #a9b388;
