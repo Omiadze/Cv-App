@@ -1,0 +1,39 @@
+#root {
+  max-width: 1280px;
+  font-size: larger;
+  padding: 2rem;
+}
+
+.main-container {
+  display: flex;
+
+  gap: 50px;
+}
+.general,
+.education,
+.experience,
+.cv {
+  background-color: #fefae0;
+  color: black;
+  padding: 20px;
+  margin-bottom: 10px;
+}
+.input-container {
+  margin-bottom: 20px;
+}
+.title {
+  text-align: center;
+  margin-bottom: 5%;
+}
+.general,
+.education,
+.experience,
+.cv {
+  border-radius: 30px;
+  color: #b99470;
+}
+.general h1,
+.education h1,
+.experience h1 {
+  text-align: center;
+}

@@ -1,0 +1,27 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.output-container {
+  color: #b99470;
+}
+.general-info-content {
+  width: 50vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #5f6f52;
+  color: #b99470;
+  border-radius: 5px;
+  padding: 2%;
+}
+.h1 {
+  background-color: #a9b388;
+  color: white;
+  text-align: center;
+  margin-top: 2%;
+  border-radius: 5px;
+  padding: 2%;
+}
