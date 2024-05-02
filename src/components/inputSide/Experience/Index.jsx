@@ -1,6 +1,8 @@
 import CreateInput from "../CreateInput";
 import Submit from "../Submit";
 import { useState } from "react";
+import "./index.css";
+
 const Index = ({ experienceState, setExperienceState }) => {
   const [visible, setVisible] = useState(false);
   const onChange = (e) => {
@@ -15,13 +17,13 @@ const Index = ({ experienceState, setExperienceState }) => {
   if (!visible) {
     return (
       <div>
-        <h1>Work Experience</h1>
         <button
+          className="exp-btn"
           onClick={() => {
             setVisible(true);
           }}
         >
-          ADD
+          Experience
         </button>
       </div>
     );
@@ -29,7 +31,14 @@ const Index = ({ experienceState, setExperienceState }) => {
     return (
       <div>
         <form action="">
-          <h1>Work Experience</h1>
+          <button
+            className="exp-btn"
+            onClick={() => {
+              setVisible(false);
+            }}
+          >
+            Experience
+          </button>
           <CreateInput
             name="Company:"
             type="text"

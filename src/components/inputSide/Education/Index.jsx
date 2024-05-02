@@ -1,6 +1,7 @@
 import CreateInput from "../CreateInput";
 import Submit from "../Submit";
 import { useState } from "react";
+import "./index.css";
 const Index = ({ educationState, setEducationState }) => {
   console.log(educationState);
   const [visible, setVisible] = useState(false);
@@ -17,13 +18,13 @@ const Index = ({ educationState, setEducationState }) => {
   if (!visible) {
     return (
       <div>
-        <h1>Education</h1>
         <button
+          className="edu-btn"
           onClick={() => {
             setVisible(true);
           }}
         >
-          ADD
+          Education
         </button>
       </div>
     );
@@ -31,7 +32,14 @@ const Index = ({ educationState, setEducationState }) => {
     return (
       <div>
         <form action="">
-          <h1>Education</h1>
+          <button
+            className="edu-btn"
+            onClick={() => {
+              setVisible(false);
+            }}
+          >
+            Education
+          </button>
           <CreateInput
             name="University:"
             type="text"

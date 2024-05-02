@@ -1,5 +1,5 @@
 #root {
-  max-width: 1280px;
+  width: 80vw;
   font-size: larger;
   padding: 2rem;
 }
@@ -17,9 +17,11 @@
   color: black;
   padding: 20px;
   margin-bottom: 10px;
+  flex: 70%;
 }
 .input-container {
   margin-bottom: 20px;
+  flex: 30%;
 }
 .title {
   text-align: center;
@@ -46,6 +48,14 @@
 @media only screen and (max-width: 800px) {
   .main-container {
     flex-direction: column;
-    font-size: small;
+  }
+  .general h1,
+  .education h1,
+  .experience h1,
+  .cv h1 {
+    font-size: medium;
+  }
+  .title {
+    font-size: medium;
   }
 }

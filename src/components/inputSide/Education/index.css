@@ -1,0 +1,13 @@
+.edu-btn {
+  text-decoration: none;
+  width: 100%;
+  background-color: #fefae0;
+  font-size: x-large;
+  font-weight: 800;
+  color: #b99470;
+  text-align: center;
+}
+.edu-btn:hover,
+.edu-btn:active {
+  background-color: #faf1e4;
+}
