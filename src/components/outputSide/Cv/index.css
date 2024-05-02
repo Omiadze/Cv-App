@@ -7,7 +7,6 @@
   color: #b99470;
 }
 .general-info-content {
-  width: 50vw;
   display: flex;
   flex-direction: column;
   justify-content: center;
