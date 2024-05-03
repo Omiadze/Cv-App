@@ -3,16 +3,35 @@ import Submit from "../Submit";
 import { useState } from "react";
 import "./index.css";
 
-const Index = ({ experienceState, setExperienceState }) => {
+const Index = ({
+  experienceState,
+  setExperienceState,
+  dateState,
+  setDateState,
+}) => {
   const [visible, setVisible] = useState(false);
   const onChange = (e) => {
     const propertyName = e.target.id;
-    console.log(propertyName);
+
     experienceState[propertyName] = e.target.value;
+    dateState[propertyName] = e.target.value;
   };
   const onSubmit = (e) => {
     e.preventDefault();
     setExperienceState({ ...experienceState });
+    setDateState({ ...dateState });
+  };
+  const onDeleteClick = () => {
+    setExperienceState({
+      company: "",
+      role: "",
+    });
+    setDateState({
+      startDateForEdu: "",
+      endDateForEdu: "",
+      startDateForExp: "",
+      endDateForExp: "",
+    });
   };
   if (!visible) {
     return (
@@ -49,18 +68,20 @@ const Index = ({ experienceState, setExperienceState }) => {
           <CreateInput
             name="Start Date:"
             type="date"
-            id="startDate"
+            id="startDateForExp"
             onChange={onChange}
           />
           <CreateInput
             name="End Date:"
             type="date"
-            id="startDate"
+            id="endDateForExp"
             onChange={onChange}
           />
           <button
+            className="delete-btn"
             onClick={() => {
               setVisible(false);
+              onDeleteClick();
             }}
           >
             Delete

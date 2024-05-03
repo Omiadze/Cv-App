@@ -4,16 +4,17 @@
   box-sizing: border-box;
 }
 .output-container {
-  color: #b99470;
+  color: #000000;
 }
 .general-info-content {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #5f6f52;
-  color: #b99470;
-  border-radius: 5px;
+  background-color: #e47960;
+  color: #000000;
+  border-bottom-left-radius: 40px;
+  border-bottom-right-radius: 40px;
   padding: 2%;
   text-align: center;
 }
@@ -21,10 +22,19 @@
   text-align: center;
 }
 .h1 {
-  background-color: #a9b388;
-  color: white;
+  border-bottom: 3px solid #e47960;
+  color: #000000;
   text-align: center;
   margin-top: 2%;
   border-radius: 5px;
   padding: 2%;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.general-p {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-top: 8px;
 }

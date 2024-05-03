@@ -5,6 +5,7 @@ function Index({ generalState, setGeneralState }) {
   const onChange = (e) => {
     const propertyName = e.target.id;
     generalState[propertyName] = e.target.value;
+    setGeneralState({ ...generalState });
   };
 
   const onSubmit = (e) => {

@@ -1,13 +1,26 @@
 .edu-btn {
   text-decoration: none;
   width: 100%;
-  background-color: #fefae0;
+  background-color: white;
   font-size: x-large;
   font-weight: 800;
-  color: #b99470;
+  color: #e47960;
   text-align: center;
 }
 .edu-btn:hover,
 .edu-btn:active {
-  background-color: #faf1e4;
+  background-color: #e47960;
+  color: #000000;
+}
+.delete-btn {
+  text-decoration: none;
+  background-color: #e47960;
+  color: white;
+  margin-top: 4%;
+  transition: all 300ms cubic-bezier(0.23, 1, 0.32, 1);
+  will-change: transform;
+}
+.delete-btn:hover {
+  box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+  transform: translateY(-2px);
 }

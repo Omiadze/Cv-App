@@ -5,19 +5,27 @@ import Cv from "./components/outputSide/Cv";
 import "./App.css";
 import { useState } from "react";
 function App() {
-  const [inputState, setInputState] = useState({
+  const [generalState, setGeneralState] = useState({
     firstName: "",
     surname: "",
     email: "",
     number: "",
+  });
+  const [educationState, setEducationState] = useState({
     uni: "",
     faculty: "",
+  });
+  const [experienceState, setExperienceState] = useState({
     company: "",
     role: "",
-    startDate: "",
-    endDate: "",
   });
-  console.log(inputState);
+  const [dateState, setDateState] = useState({
+    startDateForEdu: "",
+    endDateForEdu: "",
+    startDateForExp: "",
+    endDateForExp: "",
+  });
+
   return (
     <>
       <h1 className="title">CV Aplication</h1>
@@ -25,25 +33,34 @@ function App() {
         <div className="input-container">
           <div className="general">
             <General
-              generalState={inputState}
-              setGeneralState={setInputState}
+              generalState={generalState}
+              setGeneralState={setGeneralState}
             />
           </div>
           <div className="education">
             <Education
-              educationState={inputState}
-              setEducationState={setInputState}
+              educationState={educationState}
+              setEducationState={setEducationState}
+              dateState={dateState}
+              setDateState={setDateState}
             />
           </div>
           <div className="experience">
             <Experience
-              experienceState={inputState}
-              setExperienceState={setInputState}
+              experienceState={experienceState}
+              setExperienceState={setExperienceState}
+              dateState={dateState}
+              setDateState={setDateState}
             />
           </div>
         </div>
         <div className="cv">
-          <Cv inputState={inputState} />
+          <Cv
+            generalState={generalState}
+            educationState={educationState}
+            experienceState={experienceState}
+            dateState={dateState}
+          />
         </div>
       </div>
     </>

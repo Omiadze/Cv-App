@@ -2,17 +2,37 @@ import CreateInput from "../CreateInput";
 import Submit from "../Submit";
 import { useState } from "react";
 import "./index.css";
-const Index = ({ educationState, setEducationState }) => {
+const Index = ({
+  educationState,
+  setEducationState,
+  dateState,
+  setDateState,
+}) => {
   console.log(educationState);
   const [visible, setVisible] = useState(false);
   const onChange = (e) => {
     const propertyName = e.target.id;
     console.log(propertyName);
     educationState[propertyName] = e.target.value;
+    dateState[propertyName] = e.target.value;
   };
   const onSubmit = (e) => {
     e.preventDefault();
     setEducationState({ ...educationState });
+    setDateState({ ...dateState });
+  };
+
+  const onDeleteClick = () => {
+    setEducationState({
+      uni: "",
+      faculty: "",
+    });
+    setDateState({
+      startDateForEdu: "",
+      endDateForEdu: "",
+      startDateForExp: "",
+      endDateForExp: "",
+    });
   };
 
   if (!visible) {
@@ -55,18 +75,20 @@ const Index = ({ educationState, setEducationState }) => {
           <CreateInput
             name="Start Date:"
             type="date"
-            id="startDate"
+            id="startDateForEdu"
             onChange={onChange}
           />
           <CreateInput
             name="End Date:"
             type="date"
-            id="endDate"
+            id="endDateForEdu"
             onChange={onChange}
           />
           <button
+            className="delete-btn"
             onClick={() => {
               setVisible(false);
+              onDeleteClick();
             }}
           >
             Delete

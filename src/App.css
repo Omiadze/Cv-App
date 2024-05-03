@@ -13,11 +13,12 @@
 .education,
 .experience,
 .cv {
-  background-color: #fefae0;
+  background-color: white;
   color: black;
   padding: 20px;
   margin-bottom: 10px;
   flex: 70%;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 .input-container {
   margin-bottom: 20px;
@@ -32,7 +33,7 @@
 .experience,
 .cv {
   border-radius: 30px;
-  color: #b99470;
+  color: #e47960;
 }
 .general,
 .education,

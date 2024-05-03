@@ -1,45 +1,58 @@
 import "./index.css";
+import Email from "../../Svg/Email";
+import Phone from "../../Svg/Phone";
+import Education from "../../Svg/Education";
+import Experience from "../../Svg/Experience";
 
-const index = ({ inputState }) => {
+const index = ({
+  generalState,
+  educationState,
+  experienceState,
+  dateState,
+}) => {
   return (
     <div className="output-container">
       <div className="general-info-content">
         <h1>
-          {inputState.firstName} {inputState.username}
+          {generalState.firstName} {generalState.username}
         </h1>
-        <p>
+        <p className="general-p">
+          <Email />
           <b>Email: </b>
-          {inputState.email}
+          {generalState.email}
         </p>
-        <p>
+        <p className="general-p">
+          <Phone />
           <b>Phone Number: </b>
-          {inputState.number}
+          {generalState.number}
         </p>
       </div>
+
       <div className="education-info-content">
         <div className="h1">
+          <Education />
           <h1>Education</h1>
         </div>
         <h2>Faculty: </h2>
-        <p>{inputState.faculty}</p>
+        <p>{educationState.faculty}</p>
         <h2>University: </h2>
-        <p>{inputState.university}</p>
+        <p>{educationState.university}</p>
         <br></br>
+        <p>From: {dateState.startDateForEdu}</p>
+        <p>To: {dateState.endDateForEdu}</p>
 
-        <p>From: {inputState.startDate}</p>
-        <p>To: {inputState.endDate}</p>
         <div className="experience-info-content">
           <div className="h1">
+            <Experience />
             <h1>Experience</h1>
           </div>
           <h2>Company: </h2>
-          <p>{inputState.company}</p>
+          <p>{experienceState.company}</p>
           <h2>Position: </h2>
-          <p>{inputState.role}</p>
+          <p>{experienceState.role}</p>
           <br></br>
-
-          <p>From: {inputState.startDate}</p>
-          <p>To: {inputState.endDate}</p>
+          <p>From: {dateState.startDateForExp}</p>
+          <p>To: {dateState.endDateForExp}</p>
         </div>
       </div>
     </div>

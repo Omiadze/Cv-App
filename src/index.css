@@ -28,8 +28,8 @@ body {
   justify-content: center;
   min-width: 320px;
   min-height: 100vh;
-  background-color: #b99470;
-  color: white;
+  background-color: whitesmoke;
+  color: #e47960;
 }
 
 h1 {
@@ -49,7 +49,7 @@ button {
   transition: border-color 0.25s;
 }
 button:hover {
-  border-color: #646cff;
+  border-color: #e47960;
 }
 button:focus,
 button:focus-visible {
