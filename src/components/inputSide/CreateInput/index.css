@@ -3,3 +3,14 @@
   flex-direction: column;
   gap: 5px;
 }
+input {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 5px 0;
+  box-sizing: border-box;
+  border-radius: 9px;
+  border-color: antiquewhite;
+}
+input:focus {
+  background-color: whitesmoke;
+}
