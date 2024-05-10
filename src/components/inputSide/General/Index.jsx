@@ -10,7 +10,6 @@ function Index({ generalState, setGeneralState }) {
 
   const onSubmit = (e) => {
     e.preventDefault();
-    console.log(generalState);
     setGeneralState({ ...generalState });
   };
 

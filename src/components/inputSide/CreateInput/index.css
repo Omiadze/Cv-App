@@ -13,4 +13,9 @@ input {
 }
 input:focus {
   background-color: whitesmoke;
+  color: black;
+}
+
+input:disabled {
+  background-color: white;
 }

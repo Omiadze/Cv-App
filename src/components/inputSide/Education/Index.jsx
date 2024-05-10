@@ -8,11 +8,9 @@ const Index = ({
   dateState,
   setDateState,
 }) => {
-  console.log(educationState);
   const [visible, setVisible] = useState(false);
   const onChange = (e) => {
     const propertyName = e.target.id;
-    console.log(propertyName);
     educationState[propertyName] = e.target.value;
     dateState[propertyName] = e.target.value;
   };
