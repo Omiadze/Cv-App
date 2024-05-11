@@ -4,6 +4,7 @@ import Experience from "./components/inputSide/Experience/Index";
 import Cv from "./components/outputSide/Cv";
 import "./App.css";
 import { useState } from "react";
+
 function App() {
   const [generalState, setGeneralState] = useState({
     firstName: "",
