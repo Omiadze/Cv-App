@@ -1,6 +1,6 @@
-# React CV Builder
+# CV Builder
 
-This is a React project aimed at building a CV (Curriculum Vitae) where users can input their personal information, educational experience, and work experience. It utilizes React components and state management for dynamic rendering and user interaction.
+This is a React project aimed at building a CV where users can input their personal information, educational experience, and work experience. It utilizes React components and state management for dynamic rendering and user interaction.
 
 ## Project Overview
 
